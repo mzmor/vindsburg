@@ -29,4 +29,3 @@ spec:
             cpu: {{ .Values.backend.resources.requests.cpu }}
           limits:
             memory: {{ .Values.backend.resources.limits.memory }}
-            cpu: {{ .Values.backend.resources.limits.cpu }}

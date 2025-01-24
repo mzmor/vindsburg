@@ -26,4 +26,3 @@ spec:
             cpu: {{ .Values.frontend.resources.requests.cpu }}
           limits:
             memory: {{ .Values.frontend.resources.limits.memory }}
-            cpu: {{ .Values.frontend.resources.limits.cpu }}

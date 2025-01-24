@@ -3,15 +3,14 @@ frontend:
   replicas: 2
   resources:
     requests:
-      cpu: "100m"
+      cpu: "800m"
       memory: "128Mi"
     limits:
-      cpu: "200m"
       memory: "256Mi"
   ingress:
     host: frontend.example.com
     adminWhitelist: "192.168.0.0/24"
-    apiInternalWhitelist: "10.0.0.0/16"  # 192.168.49.1 - internal IP of my local machine
+    apiInternalWhitelist: "10.0.0.0/16"
     paths:
     - path: /
       service: frontend
@@ -33,16 +32,20 @@ backend:
   replicas: 2
   resources:
     requests:
-      cpu: "100m"
+      cpu: "800m"
       memory: "128Mi"
     limits:
-      cpu: "200m"
       memory: "256Mi"
+
+backendAutoscaling:
+  minReplicas: 2
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
 
 database:
   image: postgres:15
-  user: app_user
-  password: app_password
+  user: app_user  # TODO: use a secrets manager tool
+  password: app_password  # TODO: use a secrets manager tool
   name: app_db
   replicas: 2
   storage:
