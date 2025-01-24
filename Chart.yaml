@@ -1,0 +1,10 @@
+apiVersion: v2
+name: multi-app-deployment
+version: 1.0.0
+description: A Helm chart to deploy multi-component application
+
+# dependencies:
+#   - name: ingress-nginx
+#     repository: https://kubernetes.github.io/ingress-nginx
+#     version: 4.12.0
+#     condition: ingress-nginx.disabled
