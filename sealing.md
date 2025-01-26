@@ -41,3 +41,8 @@ kubeseal --format yaml \
   --controller-name sealed-secrets \
   < database-secret.yaml > templates/database-sealed-secret.yaml
 ```
+
+## Update the Helm chart with sealed secrets
+```bash
+helm upgrade vindsburg .
+```

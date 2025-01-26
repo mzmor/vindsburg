@@ -34,15 +34,14 @@ The chart includes high availability, secure secret management, and an IP whitel
 
 3. Install the chart:
 
-   Prerequisite: Seal the secrets - see [sealing instructions](sealing.md)
-
    ```bash
    helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
    helm repo add sealed-secrets https://bitnami-labs.github.io/sealed-secrets
    helm repo update
    helm dependency update
    helm install vindsburg .
-   ```   
+   ```
+   Next: Seal the secrets and upgrade the chart - see [sealing instructions](sealing.md)
 
 4. Verify the deployment:
 
