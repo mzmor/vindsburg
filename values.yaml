@@ -44,12 +44,13 @@ backendAutoscaling:
 
 database:
   image: postgres:15
-  user: app_user  # TODO: use a secrets manager tool
-  password: app_password  # TODO: use a secrets manager tool
-  name: app_db
   replicas: 2
   storage:
     size: 5Gi
+
+sealed-secrets:
+  enabled: true
+  fullnameOverride: sealed-secrets
 
 ingress-nginx:
   controller:

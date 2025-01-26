@@ -21,7 +21,7 @@ spec:
         - name: DB_CONNECTION_STRING
           valueFrom:
             secretKeyRef:
-              name: app-secrets
+              name: {{ template "database.secretName" . }}
               key: database-url
         resources:
           requests:

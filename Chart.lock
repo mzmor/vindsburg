@@ -2,5 +2,8 @@ dependencies:
 - name: ingress-nginx
   repository: https://kubernetes.github.io/ingress-nginx
   version: 4.12.0
-digest: sha256:169b832e6cc816f247458fd234ab414bbd0fc20ba3ce86d30f9c34f7794fd3af
-generated: "2025-01-24T16:02:22.476126754+01:00"
+- name: sealed-secrets
+  repository: https://bitnami-labs.github.io/sealed-secrets
+  version: 2.13.3
+digest: sha256:3c051ab3c075ab89a91ea6707c568272ada5c30f9ab6a3f01472f7e409cc8913
+generated: "2025-01-26T11:12:26.589137995+01:00"

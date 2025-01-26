@@ -22,15 +22,18 @@ spec:
         - name: POSTGRES_USER
           valueFrom:
             secretKeyRef:
-              name: app-secrets
+              name: {{ template "database.secretName" . }}
               key: database-user
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: app-secrets
+              name: {{ template "database.secretName" . }}
               key: database-password
         - name: POSTGRES_DB
-          value: {{ .Values.database.name }}
+          valueFrom:
+            secretKeyRef:
+              name: {{ template "database.secretName" . }}
+              key: database-name
         volumeMounts:
         - name: database-storage
           mountPath: /var/lib/postgresql/data

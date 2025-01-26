@@ -2,3 +2,4 @@
 charts/*/charts/
 *.tgz
 .helm/
+database-secret.yaml
