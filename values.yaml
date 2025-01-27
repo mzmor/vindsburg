@@ -11,16 +11,6 @@ frontend:
     host: frontend.example.com
     adminWhitelist: "192.168.0.0/24"
     apiInternalWhitelist: "10.0.0.0/16"
-    paths:
-    - path: /
-      service: frontend
-      port: 8080
-    - path: /admin
-      service: frontend
-      port: 8080
-    - path: /api/internal
-      service: frontend
-      port: 8080
 
 frontendAutoscaling:
   minReplicas: 2
